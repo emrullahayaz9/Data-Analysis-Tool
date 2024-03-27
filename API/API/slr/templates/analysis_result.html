@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Linear Regression Analysis Result</title>
+</head>
+<body>
+    <h1>Simple Linear Regression Analysis Result</h1>
+    <div>
+        <h2>Model Performance:</h2>
+
+        <ul>
+            <li>R^2 score: {{r2}}</li>
+            <li>Mean Absolute Error - MAE: {{mean_absolute}}</li>
+            <li>Mean Squared Error - MSE: {{mean_squared}}</li>
+            <li>Root Mean Squared Error - RMSE: {{root_mean}}</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Scatter Plot:</h2>
+        <img src="{% static plot_path %}" alt="Scatter Plot">
+    </div>
+</body>
+</html>
