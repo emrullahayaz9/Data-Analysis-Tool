@@ -1,0 +1,90 @@
+    <!-- Simple Linear Regression -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Simple Linear Regression</h5>
+                <p class="card-text">Use this option to analyze data using Simple Linear Regression algorithm.</p>
+                <form action="http://localhost:8000/slr/{{request.user.username}}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="algorithm" value="simple_linear_regression">
+                    <input class="form-control mb-3" type="file" name="csv_file" accept=".csv" required>
+                    <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Multiple Linear Regression -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Multiple Linear Regression</h5>
+                <p class="card-text">Use this option to analyze data using Multiple Linear Regression algorithm.</p>
+                <form action="http://localhost:8000/mlr/{{request.user.username}}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="algorithm" value="multiple_linear_regression">
+                    <input class="form-control mb-3" type="file" name="csv_file" accept=".csv" required>
+                    <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Polynomial Linear Regression -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Polynomial Linear Regression</h5>
+                <p class="card-text">Use this option to analyze data using Polynomial Linear Regression algorithm.</p>
+                <form action="http://localhost:8000/plr/{{request.user.username}}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="algorithm" value="multiple_linear_regression">
+                    <input class="form-control mb-3" type="file" name="csv_file" accept=".csv" required>
+                    <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Support Vector Regression (SVR) -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Support Vector Regression (SVR)</h5>
+                <p class="card-text">Use this option to analyze data using Support Vector Regression (SVR) algorithm.</p>
+                <form action="http://localhost:8000/svr/{{request.user.username}}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="algorithm" value="multiple_linear_regression">
+                    <input class="form-control mb-3" type="file" name="csv_file" accept=".csv" required>
+                    <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Decision Tree Regression -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Decision Tree Regression</h5>
+                <p class="card-text">Use this option to analyze data using Decision Tree Regression algorithm.</p>
+                <form action="http://localhost:8000/dtr/{{request.user.username}}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="algorithm" value="multiple_linear_regression">
+                    <input class="form-control mb-3" type="file" name="csv_file" accept=".csv" required>
+                    <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Random Forest Regression -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Random Forest Regression</h5>
+                <p class="card-text">Use this option to analyze data using Random Forest Regression algorithm.</p>
+                <form action="http://localhost:8000/rfr/{{request.user.username}}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="algorithm" value="multiple_linear_regression">
+                    <input class="form-control mb-3" type="file" name="csv_file" accept=".csv" required>
+                    <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+                </form>
+            </div>
+        </div>
+    </div>

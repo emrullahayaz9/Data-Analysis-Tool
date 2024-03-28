@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'slr',
     'index',
+    'manipulate',
+    'regressions',
     'rest_framework',
 ]
 
@@ -57,7 +59,9 @@ ROOT_URLCONF = 'API.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR/"templates"
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

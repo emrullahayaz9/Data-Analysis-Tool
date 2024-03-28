@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSV Data</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+j6q5sr9x3f2z7uLvUp4f+8/Wfon8J6E113D6Qf" crossorigin="anonymous">
 </head>
 <body>
-    <h1>CSV Data</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                {% for column_name in column_names %}
-                    <th>{{ column_name }}</th>
-                {% endfor %}
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in data_rows %}
+    <div class="container">
+        <h1 class="mt-5">CSV Data</h1>
+        <table class="table table-bordered mt-4">
+            <thead class="table-dark">
                 <tr>
-                    {% for value in row %}
-                        <td>{{ value }}</td>
+                    {% for column_name in column_names %}
+                        <th>{{ column_name }}</th>
                     {% endfor %}
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for row in data_rows %}
+                    <tr>
+                        {% for value in row %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-f0Uxw3xD6gh0O/lf0u8pxbz3FeQddm9BR63cBik5l7P7SEqUj4plmgGn89eZXCVJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-21RHY3T03NHHLujMkSJKIDwP1ePxxiHZcS4F+U4HnQUVv5GlD/+O2Ozi1M3rU0cl" crossorigin="anonymous"></script>
 </body>
 </html>

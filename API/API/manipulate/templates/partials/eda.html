@@ -1,0 +1,126 @@
+<h1 class="mt-5">Data Preprocessing</h1>
+        
+<div class="row">
+    <div class="col preprocessing-item">
+        <h4>Data Cleaning</h4>
+        <p>Identifying and handling missing or corrupted data elements.</p>
+        <div class="row">
+            <form action="/manipulate/cleaning" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Select CSV file:</label>
+                    <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">manipulate</button>
+            </form>
+    </div>
+    </div>
+    <div class="col preprocessing-item">
+        <h4>Data Standardization or Normalization</h4>
+        <p>Making the scales or ranges of data similar to each other.</p>
+    </div>
+    <div class="row">
+        <form action="/manipulate/standardization" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="csvFile" class="form-label">Select CSV file:</label>
+                <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+            </div>
+            <button type="submit" class="btn btn-primary">manipulate</button>
+        </form>
+</div>
+</div>
+
+<div class="row">
+    <div class="col preprocessing-item">
+        <h4>Categorical Variable Encoding</h4>
+        <p>Converting categorical variables into numerical values.</p>
+        <div class="row">
+            <form action="/manipulate/encoding" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Select CSV file:</label>
+                    <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">manipulate</button>
+            </form>
+    </div>
+    </div>
+    <div class="col preprocessing-item">
+        <h4>Feature Transformation</h4>
+        <p>Creating new features or transforming existing ones.</p>
+        <div class="row">
+            <form action="/manipulate/featuretransformation" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Select CSV file:</label>
+                    <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">manipulate</button>
+            </form>
+    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col preprocessing-item">
+        <h4>Feature Selection</h4>
+        <p>Removing unnecessary or low-variance features.</p>
+        <div class="row">
+            <form action="/manipulate/featureselection" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Select CSV file:</label>
+                    <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">manipulate</button>
+            </form>
+    </div> 
+    </div>
+    <div class="col preprocessing-item">
+        <h4>Data Splitting</h4>
+        <p>Splitting the dataset into training, validation, and test sets.</p>
+        <div class="row">
+            <form action="/manipulate/splitting" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Select CSV file:</label>
+                    <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">manipulate</button>
+            </form>
+    </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col preprocessing-item">
+        <h4>Data Balancing</h4>
+        <p>Addressing imbalanced class distributions by oversampling or undersampling.</p>
+        <div class="row">
+            <form action="/manipulate/balancing" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Select CSV file:</label>
+                    <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">manipulate</button>
+            </form>
+    </div>
+    </div>
+    <div class="col preprocessing-item">
+        <h4>Dimensionality Reduction</h4>
+        <p>Reducing the dimensions of high-dimensional datasets.</p>
+        <div class="row">
+            <form action="/manipulate/reduction" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Select CSV file:</label>
+                    <input type="file" class="form-control" id="csvFile" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">manipulate</button>
+            </form>
+    </div>
+    </div>
+</div>

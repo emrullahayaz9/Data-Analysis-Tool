@@ -5,22 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Linear Regression Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Simple Linear Regression Analysis Result</h1>
-    <div>
-        <h2>Model Performance:</h2>
-
-        <ul>
-            <li>R^2 score: {{r2}}</li>
-            <li>Mean Absolute Error - MAE: {{mean_absolute}}</li>
-            <li>Mean Squared Error - MSE: {{mean_squared}}</li>
-            <li>Root Mean Squared Error - RMSE: {{root_mean}}</li>
-        </ul>
-    </div>
-    <div>
-        <h2>Scatter Plot:</h2>
-        <img src="{% static plot_path %}" alt="Scatter Plot">
+    <div class="container">
+        <h1>Simple Linear Regression Analysis Report</h1>
+        
+        <div>
+            <h2>Model Performance:</h2>
+            <ul>
+                <li><strong>R^2 score:</strong> {{r2}}</li>
+                <li><strong>Mean Absolute Error - MAE:</strong> {{mean_absolute}}</li>
+                <li><strong>Mean Squared Error - MSE:</strong> {{mean_squared}}</li>
+                <li><strong>Root Mean Squared Error - RMSE:</strong> {{root_mean}}</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h2>Scatter Plot:</h2>
+            <img src="{% static plot_path %}" alt="Scatter Plot">
+        </div>
     </div>
 </body>
 </html>

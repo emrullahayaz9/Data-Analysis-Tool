@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tüm CSV Dosyaları</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+j6q5sr9x3f2z7uLvUp4f+8/Wfon8J6E113D6Qf" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Tüm CSV Dosyaları</h1>
-    <ul>
-        {% for csv_file in csv_files %}
-            <li>
-                <a href="/slr/show/detail/{{csv_file}}">
-                {{ csv_file }} 
-                </a>
-                <a href="/slr/show/analysis/{{csv_file}}">Show analysis</a>
-            </li>
-                
-            {% endfor %}
-    </ul>
+    <div class="container">
+        <h1 class="mt-5">Tüm CSV Dosyaları</h1>
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Dosya Adı</th>
+                    <th scope="col">Analizi Görüntüle</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for csv_file in csv_files %}
+                <tr>
+                    <td>
+                        <a href="/slr/show/detail/{{ csv_file }}">{{ csv_file }}</a>
+                    </td>
+                    <td>
+                        <a href="/slr/show/analysis/{{ csv_file }}" class="btn btn-primary">Analizi Görüntüle</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-f0Uxw3xD6gh0O/lf0u8pxbz3FeQddm9BR63cBik5l7P7SEqUj4plmgGn89eZXCVJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-21RHY3T03NHHLujMkSJKIDwP1ePxxiHZcS4F+U4HnQUVv5GlD/+O2Ozi1M3rU0cl" crossorigin="anonymous"></script>
 </body>
 </html>
